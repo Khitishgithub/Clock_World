@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebDev</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="countdowntimer.css">
+  </head>
+  <body>
+    <h1>CountdownTimer</h1>
+    <h2>Enter start time</h2>
+    <div oninput="displaymin()">
+      <input type="number" id="hours" min="0" max="23" placeholder="hrs" /> :
+      <input type="number" id="minutes" min="0" max="59" placeholder="mins" /> :
+      <input type="number" id="seconds" min="0" max="59" placeholder="secs" />
+    </div>
+    <div id="display"></div>
+    <div>
+      <button id="start" onclick="watch()">Start</button>
+    </div>
+  
+      <div class="box">
+         <a href="index.html">Back to Home page </a>
+      </div>
+
+
+    <script src="countdowntimer.js"></script>
+    </body>
+    </html>

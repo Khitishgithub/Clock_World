@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(clockimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Verdana;
+}
+h1{
+  font-size: 30px;
+  color:rgb(247, 245, 250);
+  text-decoration-line: underline;
+}
+h1:hover{
+  transition: all 0.3s;
+  transform: scale(1.2);
+}
+h2{
+  font-size: 20px;
+  color: rgb(248, 247, 252);
+}
+h2:hover{
+  transition:all 0.4s ;
+  transform: scale(1.4);
+}
+button {
+  margin: 0.2em;
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 1em;
+}
+button:hover {
+  cursor: pointer;
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+}
+#display {
+  height: 1.5em;
+  width: auto;
+  color: orangered;
+  margin: 1em;
+  font-size: 2em;
+  font-family: 'Orbitro n', sans-serif;
+}
+input {
+  padding: 1em;
+  border: none;
+}
+.box{
+  padding-top: 150px;
+
+}
+.box a{
+  text-decoration: none;
+  color: rgb(34, 23, 146);
+  font-size: 20px;
+}
+@media  screen and (max-width:500px) {
+  .box{
+    padding-top: 100px;
+  }
+  .box a {
+    font-size:15px ;
+  }
+  
+}

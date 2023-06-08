@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(clockimg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: black;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+
+}
+.nav-branding:hover{
+    color:rgb(198, 198, 40);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+
+.nav-link{
+    font-size: 20px;
+     transition: 0.5s ease; 
+}
+
+.nav-link:hover{
+    color:black;
+   background-color:rgb(238, 243, 238);
+   color:black;
+   transform: scale(1.2);
+   transition:all 0.3s ease ;
+
+
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+
+}
+
+.bar{
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 4px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+ 
+}
+@media(max-width:866px){
+    .hamburger{
+        display: block;
+    } 
+
+    .hambuger.active .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .hambuger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hambuger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        
+    }
+
+    .nav-menu{
+        position:fixed;
+        left:100%;
+        top:70px;
+        gap:0;
+        flex-direction: column;
+        background-color: #262626;
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+
+    }
+
+    .nav-menu.active{
+        left:0;
+    }
+    .nav-branding{
+        font-size: 1.7rem;
+    }
+}
+@media(max-width:539px){
+    .nav-branding{
+        font-size: 1.5rem;
+    }
+}
+@media(max-width:405px){
+    .bar{
+       width: 17px;
+       height: 1px;
+       margin: 3px auto;
+
+    }
+}
+    @media(max-width:407px){
+        .nav-branding{
+            font-size: 1rem;
+        }
+    }
+        @media(max-width:315px){
+            .nav-branding{
+                font-size: 0.8rem;
+            }
+        
+    
+
+}
