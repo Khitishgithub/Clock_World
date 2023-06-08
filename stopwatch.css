@@ -1,48 +1,50 @@
-body{
-      background-color:black;
-    font-family: Arial, Helvetica, sans-serif;
-    height:100%;
+*{
+    margin: 0;
+    padding: 0;
 }
-.container{
-     width: 800px;
-    margin: 30px auto;
+.container {
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#stopwatch{
+    font-size: 60px;
+    box-shadow: 0px 0px 10px black;
+    padding: 10px;
     color: white;
-    text-align: center; 
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
-
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    font-size: 2.6rem;
-    color:rgb(187, 225, 35);
-    text-transform: uppercase;
+#buttons{
+    display: flex;
 }
- h2:hover{
-    transform: scale(1.4);
-    transition: 0.5s ease;
-}
-#seconds,#tens {
-    font-size: 2em;
-}
-button {
-    width: 150px;
-    height: 50px;
-    background: transparent;
-    color: white;
-    border:2px solid rgb(140, 41, 226);
+button{
+    padding: 20px;
+    background-color: #5b8c22;
+    border:none;
     border-radius: 5px;
-    margin-right: 10px;
-    outline: none;
-
+    color: white;
+    font-size: larger;
+    margin: 10px;
+    width:80px;
+    box-shadow: 5px 5px 1px rgba(56, 51, 51, 0.5);
+    transition: all 0.5s;
 }
 button:hover{
-    background: white;
-    color: #041610;
+    cursor:pointer;
 }
-.box a {
+button:active{
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+.box a{
+    margin-top: 30px;
+    font-size: 20px;
     text-decoration: none;
-    font-size: 15px;
-    color: rgb(18, 95, 162);
+    text-align: center;
+    color:rgb(248, 244, 244);
 }
-
-

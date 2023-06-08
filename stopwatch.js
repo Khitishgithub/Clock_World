@@ -1,46 +1,58 @@
-var seconds= 00;
-var tens = 00;
-var appendTens = document.getElementById("tens");
-var appendSeconds = document.getElementById("seconds");
-var buttonStart = document.getElementById("button-start");
-var buttonStop = document.getElementById("button-stop");
-var buttonReset = document.getElementById("button-reset");
-var interval;
+const timer = document.getElementById("stopwatch");
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
 
-
-function startTimer(){
-    tens++;
-
-    if(tens<9){
-        appendTens.innerHTML = "0" + tens;
-
-    }
-    if(tens >9){
-        appendTens.innerHTML = tens;
-    }
-    if(tens>99){
-        seconds++;
-        appendSeconds.innerHTML = "0" + seconds;
-        tens=0;
-        appendTens.innerHTML="0"+0;
-    }
-    if(seconds > 9){
-        appendSeconds.innerHTML = seconds;
-    } 
+function startTimer() {
+  if (stoptime == true) {
+    stoptime = false;
+    timerCycle();
+  }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
 }
 
-buttonStart.onclick = function(){
-    interval = setInterval(startTimer);
-};
+function timerCycle() {
+  if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
 
-buttonStop.onclick = function(){
-    clearInterval(interval);
-};
-buttonReset.onclick = function(){
-    clearInterval(interval);
-    tens = "00";
-    seconds = "00";
-    appendSeconds.innerHTML = seconds;
-    appendTens.innerHTML = tens;
+    sec = sec + 1;
 
-};
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 ) {
+      sec = "0" + sec;
+    }
+    if (min < 10 ) {
+      min = "0" + min;
+    }
+    if (hr < 10 ) {
+      hr = "0" + hr;
+    }
+
+    timer.innerHTML = hr + ":" + min + ":" + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
+function resetTimer() {
+  timer.innerHTML = "00:00:00";
+  stoptime = true;
+  hr = 0;
+  sec = 0;
+  min = 0;
+}

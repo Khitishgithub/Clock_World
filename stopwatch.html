@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width ,initial scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
     <link rel="stylesheet" href="stopwatch.css">
-    </head>
-    <body>
+</head>
+<body>
+    <div class="container">
+        <img src="7kfO.gif"  width="200px"alt="">
+        <div id="stopwatch">
+            00:00:00
         </div>
-        <div class="container">
-            <img src="7kfO.gif" width="500px" alt=""> 
-            <h2 data-text="Stopwatch">Stopwatch</h2>
-            <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-            <button id="button-start">Start</button>
-            <button id="button-stop">Stop</button>
-            <button id="button-reset">Reset</button>
-            <script src="stopwatch.js"></script>
+        <div id="buttons">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+            <button onclick="resetTimer()">Reset</button>
         </div>
-        <div class="box">
-        <button><a href="index.html">Back to Home page </a></button>
-        </div>
-       
-    </body>
-    
+         <div class="box">
+            <a href="index.html">Back to home page</a>
+        </div> 
+    </div>
+  
+    <script src="stopwatch.js"></script>
+</body>
+
+</footer>
 </html>
