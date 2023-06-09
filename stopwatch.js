@@ -4,16 +4,20 @@ var min = 0;
 var sec = 0;
 var stoptime = true;
 
-function startTimer() {
+function startTimer() { 
+  
   if (stoptime == true) {
     stoptime = false;
     timerCycle();
   }
+  start.disabled = true;
+ 
 }
 function stopTimer() {
   if (stoptime == false) {
     stoptime = true;
   }
+  Stop.disabled = true;
 }
 
 function timerCycle() {
@@ -22,7 +26,7 @@ function timerCycle() {
     min = parseInt(min);
     hr = parseInt(hr);
 
-    sec = sec + 1;
+     sec = sec + 1;
 
     if (sec == 60) {
       min = min + 1;
