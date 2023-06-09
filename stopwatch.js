@@ -10,17 +10,24 @@ function startTimer() {
     stoptime = false;
     timerCycle();
   }
-   start.disabled = true;
+  start.disabled = false;
  
 }
 function stopTimer() {
   if (stoptime == false) {
     stoptime = true;
   }
-  Stop.disabled = true;
-  start.disabled = true;
-}
+  
 
+}
+function resetTimer(){
+  if(stoptime==true){
+    stoptime = false;
+    
+  }
+  reset.disabled = false;
+  start.disabled = false;
+}
 function timerCycle() {
   if (stoptime == false) {
     sec = parseInt(sec);
