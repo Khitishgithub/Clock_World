@@ -10,7 +10,7 @@ function startTimer() {
     stoptime = false;
     timerCycle();
   }
-  // start.disabled = true;
+   start.disabled = true;
  
 }
 function stopTimer() {
